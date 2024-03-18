@@ -1,0 +1,22 @@
+class Animal {
+  protected String name;
+  protected String sound;
+  
+  public Animal(String name, String sound) {
+     this.name = name;
+     this.sound = sound;
+  }
+  public void makeSound() {
+     System.out.println(this.name + " says: " + this.sound);
+  }
+}
+class Dog extends Animal {
+    public Dog(String name) {
+      super(name, "Woof");
+    }
+}
+class Cat extends Animal {
+    public Cat(String name) {
+      super(name, "Meow");
+    }
+}

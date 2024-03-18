@@ -1,0 +1,45 @@
+static int determinantOfMatrix(int mat[][], int n)
+    {
+        int num1, num2, det = 1, index,
+                        total = 1; // Initialize result
+         int[] temp = new int[n + 1];
+         for (int i = 0; i < n; i++){
+            index = i; // initialize the index
+             while (index < n && mat[index][i] == 0){
+                index++;
+            }
+            if (index == n) // if there is non zero element
+            {
+                continue;
+            }
+            if (index != i){
+                for (int j = 0; j < n; j++){
+                    swap(mat, index, j, i, j);
+                }
+                det = (int)(det * Math.pow(-1, index - i));
+            }
+             for (int j = 0; j < n; j++){
+                temp[j] = mat[i][j];
+            }
+            for (int j = i + 1; j < n; j++){
+                num1 = temp[i]; // value of diagonal element
+                num2 = mat[j][i]; // value of next row element
+                 for (int k = 0; k < n; k++) {
+                    mat[j][k] = (num1 * mat[j][k])
+                                - (num2 * temp[k]);
+                }
+                total = total * num1; // Det(kA)=kDet(A);
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            det = det * mat[i][i];
+        }
+        return (det / total); // Det(kA)/k=Det(A);
+    }
+    static int[][] swap(int[][] arr, int i1, int j1, int i2,
+                        int j2){
+        int temp = arr[i1][j1];
+        arr[i1][j1] = arr[i2][j2];
+        arr[i2][j2] = temp;
+        return arr;
+}

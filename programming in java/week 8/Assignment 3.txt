@@ -1,0 +1,10 @@
+for (i = 0; i < row; i++) {
+            // loop for columns
+            for (j = 0; j < column; j++) {
+                if( i == j )
+                    sum+= array[i][j];
+                // prints space
+               // System.out.print(" ");
+            }
+        }
+System.out.print(sum);
