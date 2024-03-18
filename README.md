@@ -1,4 +1,4 @@
-
-# NPTEL-answers
+NPTEL ANSWERS 2024
 # programming in java
-# nptel assignments
+# nptel assignment
+# nptel answers
