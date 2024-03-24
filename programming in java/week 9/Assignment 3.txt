@@ -1,0 +1,5 @@
+System.out.print("byte_array[" + n + "] = '" + (char)byte_array[n] + "'");
+}
+catch (IndexOutOfBoundsException e2) {
+      System.out.print("Array index is out of range");
+    }
