@@ -1,0 +1,14 @@
+int start;
+int end;
+ 
+PrintNumbers(int start, int end){
+  this.start = start;
+  this.end = end;
+}
+ 
+@Override
+public void run() {
+  for (int i = start; i <= end; i= i+2) {
+    System.out.println(Thread.currentThread().getName() + ": " + i);
+  }
+}

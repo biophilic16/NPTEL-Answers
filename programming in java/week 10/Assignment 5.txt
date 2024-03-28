@@ -1,0 +1,15 @@
+public static double celsiusToFahrenheit(double celsius) throws TemperatureException {
+  if ( celsius < -273.15 )
+    throw new TemperatureException("Invalid Celsius temperature (below absolute zero)");
+  else
+    return (celsius * 9 / 5) + 32;
+}
+ 
+public static double fahrenheitToCelsius (double fahrenheitInput) throws TemperatureException {
+  if ( fahrenheitInput < -459.67 )
+    throw new TemperatureException("Invalid Fahrenheit temperature (below absolute zero)");
+  else
+    return (fahrenheitInput - 32) * 5 / 9;
+}
+ 
+}

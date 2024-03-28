@@ -1,0 +1,32 @@
+public static void spiral_method(int [][] a, int dimension1, int dimension2)
+{
+  int k = 0;
+  int l = 0;
+  
+  while(k<dimension1 && l<dimension2){
+    
+    for (int i = l; i < dimension2 ; i++)
+      System.out.print(a[k][i] + " ");
+    
+    k++;
+    
+    for (int i = k; i < dimension1 ; i++)
+      System.out.print(a[i][dimension2-1] + " ");
+    
+    dimension2--;
+    
+    if(k<dimension1){
+      for (int i = dimension2-1; i > l-1 ; i--)
+      System.out.print(a[dimension1-1][i] + " ");
+    
+    dimension1--;
+    }
+    
+    if(l<dimension2){
+      for (int i = dimension1-1; i > k-1 ; i--)
+      System.out.print(a[i][l] + " ");
+    
+    l++;
+    }
+  }
+}
