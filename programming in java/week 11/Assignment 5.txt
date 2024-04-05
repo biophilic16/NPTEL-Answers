@@ -1,0 +1,4 @@
+// Write the SQL command to rename a table
+String alter="ALTER TABLE STUDENTS RENAME TO GRADUATES;";
+// Execute the SQL command
+stmt.executeUpdate(alter);
