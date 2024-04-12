@@ -1,0 +1,16 @@
+public static char calculateGrade(int score){
+  if (score >= 80)
+    return 'A';
+  if (score >= 70 && score < 80)
+    return 'B';
+  if (score >= 60 && score < 70)
+    return 'C';
+  if (score >= 50 && score < 60)
+    return 'D';
+  if (score >= 40 && score < 50)
+    return 'P';
+  if (score < 40)
+    return 'F';
+  else
+    return 'e';
+}

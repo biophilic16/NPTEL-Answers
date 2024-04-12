@@ -1,0 +1,33 @@
+class Car implements Vehicle{
+    private int numDoors;
+    Car(int numDoors){
+      this.numDoors = numDoors;
+    }
+    public void start() {
+      System.out.println("Car with " + numDoors + " doors started");
+    }
+  public void accelerate() {
+      System.out.println("Accelerating to 60 mph");
+    }
+  public void brake() {
+      System.out.print("Applying brakes");
+    }
+  
+}
+ 
+class Bike implements Vehicle{
+    private int numWheels;
+    Bike(int numWheels){
+      this.numWheels = numWheels;
+    }
+    public void start() {
+      System.out.println("Bike with " + numWheels + " wheels started");
+    }
+  public void accelerate() {
+      System.out.println("Accelerating to 40 mph");
+    }
+  public void brake() {
+      System.out.print("Applying brakes");
+    }
+  
+}

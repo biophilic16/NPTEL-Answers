@@ -1,0 +1,58 @@
+class Circle extends Shape {
+  private String shapeType;
+  private double area;
+  private double radius;
+  
+  Circle(String shapeType, double arg1){
+    this.shapeType = shapeType;
+    radius = arg1;
+  }
+  
+  protected void calcArea(){
+    area = Math.PI * radius * radius;
+  }
+  
+  public void printArea(){
+    System.out.print("Area of Circle: " + area );
+  }
+}
+ 
+class Rectangle extends Shape {
+  private String shapeType;
+  private double area;
+  private double length;
+  private double breadth;
+  
+  Rectangle(String shapeType, double arg1, double arg2){
+    this.shapeType = shapeType;
+    length = arg1;
+    breadth = arg2;
+  }
+  
+  protected void calcArea(){
+    area = length * breadth;
+  }
+  
+  public void printArea(){
+    System.out.print("Area of Rectangle: " + area );
+  }
+}
+ 
+class Square extends Shape {
+  private String shapeType;
+  private double area;
+  private double side;
+  
+  Square(String shapeType, double arg1){
+    this.shapeType = shapeType;
+    side = arg1;
+  }
+  
+  protected void calcArea(){
+    area = side * side;
+  }
+  
+  public void printArea(){
+    System.out.print("Area of Square: " + area );
+  }
+}
